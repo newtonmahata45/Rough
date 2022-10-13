@@ -1,0 +1,5 @@
+it.
+x : x is used to create a new file.
+    It does not work for an already existing file, as in such cases the operation fails.
+a : a stands for append, which means to add something to the
+Hardik Pandya
