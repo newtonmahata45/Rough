@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>OnMouseOver Event</title>
+    <style>
+        p{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            
+            width: 500px;
+            margin-left: 250px;
+        }
+
+        div{
+            padding:50px; 
+            background:rgb(188, 240, 253);
+            color: brown;
+            font-size: large;
+        }
+
+        #myDiv{
+            color:white ;
+            font-size:2em;
+            cursor: pointer;
+        }
+
+        strong{
+            color: blue;
+        }
+    </style>
+  </head>
+  <body>
+    <script>
+      function myFunc1(event) {
+                document.getElementById("myId").innerHTML = document.getElementById("myId").innerHTML + " Hi," ;
+            }
+        </script>
+    </script>
+
+    <p>
+      " You will get a new &nbsp;<strong>" Hi "</strong>&nbsp;  every time
+      you mouse over it: "
+    </p>
+
+    <div onmouseover="myFunc1()" id="myId"></div>
+  </body>
+</html>

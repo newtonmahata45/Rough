@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Function Selecting by tag name</title>
+    <script>
+        function countLinks(){
+            var numberOfLinks= document.anchors.length
+            document.body.style.backgroundColor="pink" //document.body.images  document.form
+            document.getElementById("pqr").innerHTML=numberOfLinks
+
+        }
+    </script>
+</head>
+<body>
+    <a href="http://www.google.com" name="gl">Google</a>
+    <br/>
+    <a href="http://www.facebook.com" name="fb">Facebook</a>
+    <br/>
+    <a href="http://www.amazon.in" name="amz">Amazon</a>
+    
+    <br>
+    <div id="pqr" onclick="countLinks()"> Count all the links</div>
+</body>
+</html>

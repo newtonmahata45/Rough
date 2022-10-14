@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Converter</title>
+    <script type="text/javascript">
+        function COD(form) {
+            form.rupee.value = form.dollar.value * 81
+        }
+        function COR(form) {
+            form.dollar.value = form.rupee.value / 81
+        }
+
+    </script>
+    <style>
+        #gh {
+            background-color: aquamarine;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    Hare Krishna:
+    </br>
+    <form>
+        USD Value:<input type="number" name="dollar" size="12">
+        <br>
+        <br>
+        <input id="gh" type="button" value="Conver to INR" onclick="COD(this.form)">
+        <input type="button" value="Conver to USD" onclick="COR(this.form)">
+        <br>
+        <br>
+        INR Value:<input type="number" name="rupee" size="12">
+
+    </form>
+
+
+</body>
+
+</html>

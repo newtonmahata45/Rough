@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Sorting Number</title>
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        background-color: rgb(197, 143, 248);
+        border: 2px solid black;
+        cursor: pointer;
+      }
+
+      .updates {
+        width: 250px;
+        margin-left: 380px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        border: 1px solid rgb(6, 252, 6);
+        
+      }
+
+      .change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        cursor: pointer;
+        margin-top: 40px;
+      }
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(110, 226, 255);
+        border: 2px solid black;
+        cursor: pointer;
+        font-size: 2em;
+        height: 80px;
+        width: 300px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function MyFun() {
+        const data = [16, 2, 4, 13, 44, 1, 25];
+        const sorted = data.sort((a, b) => a - b);
+        document.getElementById("update1").innerHTML = sorted;
+      }
+
+      function MyFunDown() {
+        const data = [16, 2, 4, 13, 44, 1, 25];
+        const dsorted = data.sort((a, b) => b - a);
+        document.getElementById("update2").innerHTML = dsorted;
+      }
+    </script>
+    <div class="container">
+      <h1>Array: [16, 2, 4, 13, 44, 1, 25]</h1>
+      <br />
+      <br />
+    </div>
+
+    <div class="change">
+      <button id="Up" name="up" onclick="MyFun()">Assending Sorting</button>
+
+    </div>
+
+    <div class="updates" id="update1"></div>
+
+    <div class="change">
+      <button id="Down" name="down" onclick="MyFunDown()">
+        Desending Sorting
+      </button>
+
+    </div>
+   
+    <div class="updates" id="update2"></div>
+  </body>
+</html>

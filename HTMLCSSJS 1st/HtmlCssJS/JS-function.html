@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My First JS Function</title>
+    <script>
+        function myCoolFunction() {
+            var sum = boom(20, 26)
+            document.getElementById("anyRandomId").innerHTML = "Income Tax Depertment  " + sum * 2
+        }
+        function boom(p, q) {
+            // window.alert("Narayan")
+            document.getElementById("jai").innerHTML= p+q
+            return p *p* q
+
+            // any line of code written after return is a waste and is ignored
+        }
+    </script>
+</head>
+
+<body>
+    <div onclick="myCoolFunction()">CLICK ME</div>
+        <p id="jai" onmouseenter="boom(4,3)">Hare Krishna</p>
+    <div id="anyRandomId">Writing Pad</div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Query Selctor</title>
+    <script>
+        //querySelector(): Returns the first element that matches a specific selector in the document
+        function change1(){
+            document.querySelector("#Aa").innerHTML= "Subhash Chandra Bose"
+            document.querySelector("#Bb").style.backgroundColor= "pink"
+            document.querySelector(".example").style.backgroundColor= "skyblue"
+            document.querySelector("#Cc").style.backgroundColor= "green"
+
+            document.querySelector("h1").innerHTML= "Heading Changed"
+            document.querySelector("body").style.backgroundColor= "yellow"
+            
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1> I am a Heading</h1>
+    <h1> I am another h1 Heading</h1>
+
+    <p class ="example" id="Aa"> This para with class ="example" id ="Aa"</p>
+    <p class ="example" id="Bb"> This para with class ="example" id ="Bb"</p>
+    <p class ="example" id="Cc"> This para with class ="example" id ="Cc"</p>
+
+    <div onclick="change1()"> Click Me</div>
+    
+</body>
+</html>
