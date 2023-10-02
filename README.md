@@ -1,1 +1,3 @@
-# newrepo
+# Practice concepts
+
+`Newton Mahata`
