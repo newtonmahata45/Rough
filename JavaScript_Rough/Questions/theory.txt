@@ -1,0 +1,978 @@
+  Q--> What is Js....?
+
+  Ans --> JavaScript is a single-threaded, non-blocking, synchronous, concurrent programming language with lots of flexibility.javaScript is a single-threaded means it only allows one logic to be performed at a time.
+                                    ||
+  Single threaded means that only one thing happens at a time.                                   
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> What is nodeJs....?
+
+  Ans --> Node.js is an open-source, cross-platform, back-end JavaScript runtime environment
+          that runs on the V8 engine and help to executes JavaScript code outside 
+          a web browser.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> Node Js singleThreaded Or multiThreaded....?
+
+  Ans --> node js is singleThreaded.
+node js can run one command at a time that why we call node js is a singleThreaded .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> What is Express... ?
+
+  Ans --> Express is a node js web application framework that provides broad features for building web and mobile applications.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> Is node js and express js Same?
+
+  Ans --> not same because node js is a platform where we can write our code and logics
+and express is a framework of node js,
+express provide us inbuild features and by using these features
+we can build our web application or mobile application in a easy way
+if we don't use express than we are not able to use bodyParser,
+express.json,encodedUrl,app.listen and many features .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+BODY PARSER =>
+===========
+
+ 
+  Q--> what is parse ?
+
+  Ans --> first of all we have to understand what is parser.
+parser will convert the format of the document to another format.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> what is bodyParser   ?
+
+  Ans --> bodyParser is a npm library package but beside that it also a thrid party global
+          middleware
+          bodyparser will convert the all HTTP req.body format and parse the data in same format in response .
+         there are four types of middle ware in body parser
+1.text format	
+2.json format
+3.urlEncoded format
+4.raw Data format
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> app = express(); ?
+
+  Ans --> here we call all the inbuild features of express and assign all the features in app 
+          variables.
+        here we can see paranthisis is empty because we call all the in build features of express.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> what does URL encoded....?
+       
+  Ans --> for example like JWT token it comes with encoded token inside this token it has a  payload seaction,
+          as per the client requirement we can put anything in payload, generaly it has userID,userName
+          it will extract the encoded Data which comes along with URL and save as it is same encoded format.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+ 
+  Q--> extended true....?
+
+          used for accpecting all incoming changes .
+
+  Ans --> when we hit the API or when our server is running at that time inside the server many bugs and cache already stored.
+        some times it will reduce our response time.
+        for example if we hit a API than again hit second time than sever will take time for give us response.
+        than server will fetch 1st hitted API data.
+
+        if there is any kind of error and bugs in your new hitted url than server also fetch the data from previous hitted API.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> mongoose.connect...?
+
+  Ans --> it is a npm library package which used to establish a connecion between node js and 
+          mongoDB.
+          
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--> useNewUrlParser.....?
+
+  Ans -->  it allow an user to fallback to old parser if they find any bug in newParser.
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> app.use('/',route)....?
+
+  Ans --> here we are invoking the route folder as a global middleware.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->  .ENV .....?
+          ||
+       How to Protect Your Nodejs server  ?    
+
+
+  Ans --> env stand for environment variable. we create .env file in our project to,
+secure our important credentials like Cluster,SECRETKey,PORT.
+           we have to write these type of  credentials in .env file.
+           if we don't use .env file and when we push our code in GitHub anyOne can see
+           our credentials as well as he can manipulate.
+        thats why we should create .env file in our project.
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+                                  PACKAGE.JSON
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+  Q--> what is package.json       ?
+
+  Ans --> it contains meta-data of a project 
+          it contains coding related details like project version, name,git repositry,
+          commands which used in these project, installed external packages details,
+        we can define our entry point.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> how we can create package.json file  ...?
+
+  Ans --> by writing 'npm init' it will create.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> what is 'NPM' ?
+
+  Ans --> npm stand for 'Node Package Manager',
+          it will manage all  packages like installation , uninstallation .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> what is package-lock.json ....?
+
+  Ans --> it contains dependencies of dependencies details...if we delete this file it will not affect on our project....
+         by installing any package it will again generate automatically .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> Is String immutable   ?
+
+  Ans --> yes string is immutable we can not change string index value.
+          we can reassign the variable and put another Sting.
+          but we can't change String index value ,because 
+          it is immutable  !
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> What is multer............?
+
+  Ans --> multer is a node js middleware for handling multipart/form-data,
+          which is primarly used for uploading files.
+                                 ||
+        muler is albe to grab the file from frontend || user and make availbe to our server .
+
+
+
+
+
+  Q--> middleware.........?
+
+  Ans --> The middleware in node. js is a function that will have all the access for request
+             an object,respond to an object, and move to the next middleware function in the application request-response cycle.
+
+
+Types of middleware: -->>
+
+1. Application-level middleware.(Global level)
+2. Router-level middleware.
+3. Error-handling middleware
+4. Built-in middleware.
+5. Third-party middleware.
+
+1. Application-level middleware.(Global level) =>
+We can use middleware in the application object of the express. 
+
+For example:
+const express = require('express');
+const app = express();
+
+app.use((req, res, next) => {
+  console.log('Time:', Date.now());
+  next();
+});
+
+app.listen(process.env.port || 3000);
+
+console.log('Server is listening at port '+ (process.env.port || 3000));
+
+
+2. Router-level middleware =>
+In a similar way as application middleware, we can use router middleware.
+ 
+For example: -
+const express = require('express');
+const app = express();
+const router = express.Router();
+
+router.use((req, res, next) => {
+  console.log('Time:', Date.now());
+  next();
+});
+
+router.get('/home', (req,res) => {
+  res.send("ok")
+});
+
+app.use('/', router);
+app.listen(process.env.port || 3000);
+
+console.log('Web Server is listening at port '+ (process.env.port || 3000));
+
+
+3. Error-handling middleware =>
+We can use this middleware to catch errors.
+
+For example:
+app.use((err, req, res, next) => {
+  res.status(500).send('Something broke!')
+});
+
+
+4. Built-in middleware =>
+Express provides some middleware by default such as static, JSON, etc.
+
+
+
+5. Third-party middleware =>
+We can use third-party middleware such as body-parser.
+mongoose datatype.......?
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+
+  Q--> How many Datatypes in mongoose  ?
+  Ans --> before creating a model we always need to create a schema,there are 8 datatypes in
+          mongoose schema...
+
+
+1.string 
+2.number
+3.boolean
+4.array
+5.objectId
+6.mixed
+7.date
+8.buffer
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> What return statement do in function   ?
+
+  Ans --> A return statement ends the execution of a function and and returns control to the
+          calling function.
+return.res.send()
+ 
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--     What is next()  do          ?
+
+   Ans -   Its a call-back function in middleware , its passed control to the sub-function .
+           If next() is missed controal flow hangs .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--> What is mongoose validator.......?
+
+  Ans --> mongoose has some kind of validator it will check in an array.
+
+           like -> lowercase...uppercase...trim....enum..minLength....maxLength...populate.
+
+
+
+FIND(): this queary will match the given parameter field than return all the matched entries in
+        a array from mongoDB data base. 
+
+
+
+
+FINDoNe(): this queary will match the given parameter field 
+than return first  matched entry from mongoDB DataBase.  {Null / falsely value}
+
+
+findById(): this queary will match the given Id as a  parameter than return the matched entries in a object from mongoDB DataBase.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->  what is MongoDb  ?
+  Ans -->  https://www.programmingyatra.in/2022/12/what-is-mongodb.html
+
+         MongoDB is a document database designed for ease of application development and scaling.
+        MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.
+                                         ||
+       MongoDB is a non-relational document database that provides support for JSON-like storage. The MongoDB database has a flexible data model that enables you to store unstructured data, and it provides full indexing  support .                         
+                                         ||
+        MongoDb is a document based database.It is an open source noSQL db management programm. that provides support for JSON-like storage. The MongoDB database has a flexible data model.                             
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> mongoose schema.........?
+               || 
+    Q--> What is Schema   ?
+
+  Ans -->   Schema defines the structure of the document our document how's Look like and it also define default values, validators, etc. 
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> what is model in node js  ......?
+
+  Ans --> basically model represents the structure of data and how should our document looks like.
+                                        ||
+Modal in Node.js is a type of JavaScript object that allows a developer to store data in a structured format. It provides a way of representing data in a consistent manner and makes it easier to manage and manipulate it.                                   
+                                        ||
+  Moedel is a repper of a schema it basically helps us to maps schema to the DB .
+model is also helps us to perform curd operation to mongoDB .
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> authentication...........?
+
+  Ans --> authentication is process of verify the user's identity , who is the user .
+           whether user logedin or not .
+          i can give you a real life example ...we have to first register on a particular webSite before login right!!!
+         after registration when we try to login it will match the given credentials with DB,
+          if it matched than we good to go,,,
+          other wise it will throw an error "password or email" incorrect someting like that.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> authorization........?
+
+  Ans --> authorization is a process of validate an user's permissions like what kind of action he can perform,
+
+    basically we follow this process when a registered  user want to hit any kind of protected API's.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> What is jwt  ?
+
+   Ans --> JSON Web Token is an open standard for securely transferring data within parties using a JSON object.
+    jsonwebtoken is used for Authorization and secret Information Exchange between two parties
+    for example between user or server || forntend or backend
+  
+             Jwt is made by ->  Header || Payload || Signature  
+
+            Herder -->>  algorithm
+           payload -->>  Any Data of user
+         Signature -->>  Secret Key  
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> How many type of jwt types.............?
+
+
+  Ans --> There are two types of JWTs: 
+1. JSON Web Signature (JWS)
+2.  JSON Web Encryption (JWE)
+
+
+1 JSON WEB TOKEN -->>>
+
+it contains three part seprated by[.]
+
+1st ....header
+
+2nd....payload
+
+3rd....signature
+
+
+
+2...JSON WEB ENCRYPTION -->>>
+
+JWE used in encryption data.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q-->  Why we use Async and await....?
+
+  Ans --> Async functions not only allow the programmer or user to escape from ' callback hell ' and they also make the code synchronous.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--> What async and await do....?
+
+Async && await ==>> 
+async its make a function return a promise ,                                   
+await makes a function wait for promise 
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> Why is async await better than callbacks......?
+
+  Ans --> Async functions not only allow the programmer or user to escape from ' callback hell ' and they also make the code synchronous.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+ 
+  Q--> What is synchronous asynchronous  ?
+
+synchronous vs asynchronous ==>>>
+https://www.programmingyatra.in/2022/11/sql-database-vs-no-sql-database.html
+
+Synchronous ==> Synchronous means the code runs in a particular sequence of instructions given in the program. Each instruction waits for the previous instruction to complete its execution. 
+
+Asynchronous ==> Asynchronous means the code runs in a no-sequence of instructions given in the Program . if any particular line of code take's time for execution , in this condition next instruction can't wait for complete pervious instruction. 
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+  Q--> What is mongoose-in-mongodb  ?
+  Ans -->  https://www.programmingyatra.in/2022/11/what-is-mongoose-in-mongodb.html?m=1
+
+           Mongoose is an (ODM) 'Object Data Modeling' Library for MongoDB and Node.js .Mongoose is usually used for connecting our Node.js to MongoDB.It manages relationships between data and it also validate our Schema .
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q-->   what is syntax  ?
+Ans --> https://www.programmingyatra.in/2022/12/what-is-syntax.html
+         
+         Programming languages have syntax. JavaScript is a programming language and like other programming languages it has its own syntax. If we do not write a syntax that JavaScript understands, it will raise different types of errors.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->      What is JSON   ?  
+Ans -->  https://www.programmingyatra.in/2022/11/what-is-json.html
+          
+        JSON stands for JavaScript Object Notation Its a key value pair, JSON is a lightweight format for storing and transporting data.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->  Block || Global  || Function  Scope  ?
+
+Ans --> Define the Boundry where You can access the variable and functions defined .
+        Any code which is within {curley brackets} is called a block
+        {var -> Global scope  ||  let && const -> Block Scope}
+
+        1.  Block Scope 
+        2.  Global Scope
+        3.  Function Scope
+ 
+    1.  Block Scope => Block Scope restricts the access from outside of any variable or function
+                       Which is declared inside a specific block .
+        Ex -           let a = 2
+                       if(a==2){
+                       let  b =3
+                       }
+                       console.log(b)
+                       We can'nt access 'b' Out side of a block .
+
+
+    2.  Global Scope => Global Scope are accessble from anywhere . 
+                        for example - if we declared a variable like a=3
+                        so Now we can access this outside of a  block or inside of a block .
+
+
+    3. Function Scope => 
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--> What does multer single do?
+
+  Ans --> multer(). single() returns a middleware function that expects to be called with the  arguments (req, res, callback) . It can be called automatically as middleware as in: app.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+   Q--    What is closer         ?    
+       
+Ans -     Closer is combination of function and lexical environment. it gives you access to an 
+          outer function’s scope from an inner function .      
+                               
+                                   
+          
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+   Q--     What does Lodash do in node JS      ?
+                        ||
+             What is Lodash    ?             
+
+ Ans -   Lodash is a Npm library in Nodejs its provide 200+ functions to facilitate web 
+         development. It provides helper functions like map, filter, invoke as well as function binding, javascript templating, deep equality checks, creating indexes and so on.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--     What is     Map    ||     Filter     ||      Reduce     ? 
+ 
+         Map =>  Map is a  method of higher order function its create a new array by performing
+                 some actions of each element of array.
+
+      Filter =>  Filter is a method of higher order function , it will filter the given value
+                 with logic and return into a new array.        
+
+      Reduce =>  The reduce() method executes a reducer function for array element. The reduce()
+                 method returns a single value .
+      
+          
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q-->  What Object.keys() method do  ?
+
+Ans -->  The Object.keys() method returns an Array object with the keys of an object.
+         The Object.keys() method does not change the original object.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->  What Object.Values() method do  ?
+
+Ans -->  The Object.Values() method returns an Array object with the keys of an object.
+         The Object.keys() method does not change the original object.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q-->  What valueOf() method do  ?
+
+Ans -->  The valueOf() method returns the primitive value of an object.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+Q-->  What is regex  ?
+
+Ans --> Regex stands for 'Regular expressions', Regex are patterns used to match character
+        combinations.
+
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+ Q--     What is Mean by Run-time Inveroment   ?
+   ans -  
+    What is Run-Time =>  The Runtime is that the period of time in which a program is executing 
+                         or compilted after compilaor is there is any Error it shows Compile time error.
+
+  Run Time Eenviroment => The Program which performs its operation or executing
+                          it the IDE  { integrated development Environment }  gibves a platform to execute the program and allocate all the resources that has to be used in that program so that program is executed succesfully / Smooth , if there is any error compiler show run time error.            
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+    Q--     What is Port  ?
+   ans -   The port are used to established a connection between the client and the server , with the help of this connection they are communicate to each other .
+        There are some specifc port are assign to perform specific Task. 
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+ Q--     What is AWS-sdk  ?
+ 
+   ans -  AWS ->  Azazon web server .
+          SDK ->  Software development Kit  .
+
+   AWS ==>>     Amazon Web Services (AWS) is a secure cloud services platform,offering compute power, database storage and it helps Running web and application servers in the cloud to host dynamic websites.
+
+
+  ACL ==>>   ITs enable you to manage access to buckets and objects. Each bucket and object has
+             an  ACL attached to it as a subresource .
+            
+   EC2 ===>> 
+   - for Running application for different environments(Test, Dev enviroments).
+   - and also for Running Jenkins or any other application for testing purpose.
+   - and to Run load testing on the application.
+
+
+S3 ==> We also use S3 (Simple Storage Service):
+  - It is Used for file storage, test data storage.
+  - It Can be used for part of data processing workflow.
+  - and also it Can also be used as code repository.
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+ Q--     What is Moment Api   ?
+
+   ans - Moment Api is that if you want to set Date and time in your Project or Assigment that with the help of moment Api you can easily Do it. 
+
+
+ =>  Moment object are Mutable.
+ => Most cases Moment should not choose moment for new project there are some possible reason's 
+    you might want to keep using it .
+    ->   Browser Support
+    ->   Dependency By other libraries
+    ->   Familarity 
+
+
+  Q-->  Modules and Types ?
+
+  Ans --> module is just like js file in which many simple or complex functionality are present which we reused .
+
+   1.   core/inbuilt
+   2.   local
+   3.   third party
+
+   //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>
+      
+  Q--> Is mean by mutable or  immutable   ?
+
+Mutable can be changed or added to where immutable means something that cannot be changed or added. Primitive values in JavaScript cannot have anything added upon to them, they can only be re-assigned, and hence all primitive values in JavaScript are immutable.
+
+primitive ->  boolean,null,number,string,symbol,undefined
+nonPrimitive => object,array
+>
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+ Q--     What is status code....   ?
+
+   ans - We can say HTTP status code is a message from  a website's server sends to the browser  to indicate whether or not that request can be fulfilled.......
+                                     ||
+        Status code are Used by in 'responce' to a client of a request.
+                                     ||
+        HTTP response status codes indicate whether a specific HTTP request has been successfully completed or not. 
+
+        The first digit of Status code is define the class of responce, while last digit do not have any clasifying || categorzation role  .
+
+200 for successfully get responce
+201 creation
+300 redirection
+400 bad request
+401 unauthorised
+402 payment required
+403 stop the client
+404 page not found
+408 request timeout
+410 page is gone permanently 
+500 internal server error
+501 not implemented 
+502 bad gateway 
+503 service unavailable
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--    What is Ref - populate      ?    
+
+Ans -  Ref => Ref is a property that refrence a document of another collection.
+        Populate => It's match the data and replace the entire document in the document that populate is used  .
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--     Why we Use Try / Catch ?         
+
+ Ans --   A try / catch block is basically used to handle errors in JavaScript , and it also not
+          Not Break our server .
+
+          If You get an error in try block it will not execute the lines of code inside try, insted it jump into the Catch bloc kand execute the code here .
+
+          Code in catch is Normally not executed rather than executed if there is error in the try block. 
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--     What is {upsert:true}  do    ?
+
+  Ans  -  Upsert it find and Update the document , but if it not find  any document than its
+          create a new document .        
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--     what is request response cycle        ?
+
+  Ans  -  The request response cycle is that the control is passes to the next callback 
+          function .  
+				-> Generally use in middleware-
+				-> When it is use there is a 3 parameters in function (req res and next) with  
+                  the help of   arguments the control is come to that function and another 
+                  next() present in the body they passes contol to the next function.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+   Q--     What is difference between put and patch         ?
+
+   Ans -   The main difference between PUT and PATCH in REST API is that PUT handles updates by 
+          replacing the entire entity || Data { so null out fields if they are not provided in the request }, while PATCH only updates the specified fields that you give it. 
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+
+   Q--     What is Moment.js           ?
+   
+
+   Ans -  MomentJS  is a JavaScript library which helps is parsing, validating, manipulating and
+          displaying date/time in JavaScript in a very easy way.
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--     What is Axious              ?
+
+ Ans -     Axious is a function which helps to get data from third party url or resources .
+
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+
+   Q--  What   $Set  ||  $push  do    ? 
+Ans - 
+        $Set => $set operator replaces the value of a field with the specified value.
+        $Push => The $push operator appends a specified value to an array.
+         
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--  Path-params  Vs   Query-params     ? 
+Ans - 
+        Path-params =>  Params is used to load differnt items / Pages based on a varible value 
+                        in url .
+                        Params value is not Visible in the Url 
+
+                      
+       Query-params =>  Query params is used to make filter / Searches .
+                        Query value is Visible in the Url  .     
+
+      
+
+
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--   what is Callback.....?    
+Ans -    When a function call from a function's parameter  these type of functions knows as 
+         CALLBACK function.
+        Ex -  next()
+
+
+   
+//<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--   What is CallBack Hell......?        
+Ans -     When a call back function call inside a callback function...and this process will
+          continued, after some time our code will increase  horizontally not vertically......and code will looks like piramid of doom....!!!
+
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+ Q --     what is promises....?
+
+A promise is an object that return a value which you hope to 
+receive in the future,
+but not now.
+promises are used to handel async operations in javascript.
+
+   Q--    why need promise...?
+
+ Ans - javaScript is always sync and sing-threaded-language.it means javascript never wait for 
+       code or function result , when they take some time, javaScript direct execute next code,
+       that's why we need promises to get our result properly .
+
+ example of promises-
+ const promise=new Promise((resolve,rejected)=>{
+  setTimeout(()=>{
+    //resolve('pass ho gya bhai')
+    rejected('fail ho gye')
+  },2000)
+
+})
+
+promise.then((data)=>{
+  console.warn(data)
+}).catch((err)=>{
+  console.warn(err)
+})
+
+console.warn("zero wait")
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+   Q--    why need laxical scope    ||     global scope ...?
+
+ Ans -    
+
+ laxical scope  =>  A value which is inside a function that can't be accesible
+from outer function....that is lexical scope.
+
+global scope => A outer Value can be accesible in a function because of global scope.
+
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+    node js architecture.....?
+    
+what is event loop...?
+
+CALL STACK ==> NODE API'S ==> CALLBACK QUEUE
+
+
+first when we console.log a function callStack register it before exicutions
+when it exicute completely call stack become empty.....
+
+than any c++ language witten code will go to node Api 
+than callback queue
+than callstack register a main function before exicite the function
+after exicution call stack will again empty.
+
+and this process will continue we call this processs Event Loop.           
+     
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+  Q--    What is Rest Api      ?
+
+ Ans - REST =>  A REST API is a way for two computer systems to communicate using the HTTP technologies found in web browsers and servers. Sharing data between two or more systems has always been a fundamental requirement of software development. 
+ For example-  Ticket booking from paytm . 
+    
+
+ //<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>>
+
+
+  Q--    What is HighOrder function     ?
+
+ Ans -   HighOrder =>  Basically, a function which takes another function as an argument or returns a function is known as a higher order function.
+
+
+  Q--    What is Hosting      ?
+
+ Ans -   
+  Hosting is a process where interpreter appers to move the decliration top of the code before execution .
+                                          ||
+  In JavaScript, a variable can be declared after it has been used. In other words; a variable can be used before it has been declared.                                        
+
+Ex - 
+greet()
+ function greet() {
+  console.log("Good-Morning")
+ }
+
+
+What is closer  ?
+closure => A closure gives you access to an outer function’s scope from an inner function  .
+
+
+
+
+
+mongodb -  
+
+
+what is event loop...?
+  What is CallBack Hell......?    
