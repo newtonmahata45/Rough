@@ -148,9 +148,9 @@ let Object1 = {
 }
 let Object2 = {
   name: "Newton",
-  age: null,
+  age: 24,
   isGod: false,
-  interest: ["Faith", "truth", 9, { Loved: "Radha", wife: "Rukmni" }, 45],
+  interest: ["Faith", "truth", 9, { Loved: "Self", wife: null }, 45],
   address: {
     city: "Dwarka",
     Pin: 361335,
@@ -161,7 +161,7 @@ let Object2 = {
 let array = [Object1, Object2]
 let theTime = "12:45"
 Object2[theTime] = "Yes"
-let route = array.filter((i) => { return !i.age })
+let route = array.filter((i) => { return !i.isGod })
 console.log(route)
 
 // alert("Newton")
